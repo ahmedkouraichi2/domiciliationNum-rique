@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #ED9316;
+    --primary: #F7A51C;
     --light: white;
     --dark: #ED9316;
 }
@@ -95,9 +95,6 @@
     font-size: 15px;
     text-transform: uppercase;
     outline: none;
-    text-transform: uppercase;
-  font: 1.5rem 'MutatorSans', sans-serif;
-  font-weight: 500;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
@@ -154,6 +151,7 @@
         opacity: 1;
     }
 }
+
 
 
 /*** Header carousel ***/
@@ -443,4 +441,14 @@ li{
     
     list-style-type: none;
 
+}
+.bg-bleue{
+    background-color:#EFA729 ;
+}
+.text-primary-jaune{
+    color: #EFA729;
+}
+
+.bg-red{
+    background-color: ;
 }
