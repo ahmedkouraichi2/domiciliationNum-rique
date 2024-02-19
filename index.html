@@ -55,17 +55,19 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.html" class="nav-item nav-link active">ACCUEIL</a>
-                <a href="about.html" class="nav-item nav-link">À PROPOS</a>
+                <a href="#acm" class="nav-item nav-link">À PROPOS</a>
                <!--  <a href="courses.html" class="nav-item nav-link">Courses</a> -->
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">domiciliation d’entreprise </a>
-                    <div class="dropdown-menu fade-down m-0">
+<!--                     <a href="#domiciliation" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">domiciliation d’entreprise </a>
+ -->                    <a href="#domiciliation" class="nav-item nav-link">domiciliation d’entreprise</a>
+                   <!--  <div class="dropdown-menu fade-down m-0">
                         <a href="team.html" class="dropdown-item">Our Team</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                         <a href="404.html" class="dropdown-item">404 Page</a>
-                    </div>
+                    </div> -->
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="#web" class="nav-item nav-link">Sites web </a>
+                <a href="#contact" class="nav-item nav-link">Contact</a>
             </div>
             <a href="" class=" bg-bleue py-4 px-lg-5 d-none d-lg-block"  style="color:#B13231;">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
@@ -74,7 +76,7 @@
 
 
     <!-- Carousel Start -->
-    <div class="container-fluid p-0 mb-5">
+    <div class="container-fluid p-0 mb-5" id="domiciliation">
         <div class="owl-carousel header-carousel position-relative">
             <div class="owl-carousel-item position-relative">
                 <img class="img-fluid" src="img/coursel/coursel1.png" alt="">
@@ -156,7 +158,7 @@
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
                             <i class="fa fa-3x fa-book-open  mb-4" style="color: #F4910E;"></i>
-                            <h5 class="mb-3" style="color: #F4910E;" >Gestion de la Paie</h5>
+                            <h5 class="mb-3" style="color: #F4910E;" >sites web</h5>
                          
                         </div>
                     </div>
@@ -168,7 +170,7 @@
 
 
     <!-- About Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-5" id="acm">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
@@ -438,7 +440,7 @@
 
 
     <!-- Categories Start -->
-    <div class="container-xxl py-5 category">
+    <div class="container-xxl py-5 category" id="web">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3"></h6>
@@ -480,8 +482,8 @@
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
-                    <h6 class="section-title bg-white text-start  pe-3" style="color: red;">À PROPOS DE NOUS</h6>
-                    <h1 class="mb-4">Bienvenue chez ACM</h1>
+<!--                     <h6 class="section-title bg-white text-start  pe-3" style="color: red;">À PROPOS DE NOUS</h6>
+ -->                    <h6 class="mb-4">développement de sites web</h6>
                     <div class="position-relative d-block h-100 overflow-hidden" >
                         <p>
                             ACM Société est une agence spécialisée dans la conception et le développement de sites web sur mesure pour les entreprises  basés dans nos locaux  ou ailleurs   .
@@ -521,7 +523,7 @@
 
 
   <!-- Contact Start -->
-  <div class="container-xxl py-5">
+  <div class="container-xxl py-5" id="contact">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h6 class="section-title bg-white text-center  px-3" style="color: #B03233;">Contactez-nous</h6>
@@ -568,18 +570,18 @@
             </div>
 
             <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                <form>
+                <form id="contactForm" action="send_email.php" method="post">
                     <div class="row g-3">
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                <label for="name">Your Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="non " type="text" id="name" name="name" required>
+                                <label for="name"> Votre Nom </label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                <label for="email">Your Email</label>
+                                <input type="email" class="form-control" id="email" name="email"  pattern="[^ @]*@[^ @]*" class="form-control" placeholder="client@gmail.com" required>
+                                <label for="email"> Email </label>
                             </div>
                         </div>
                         <div class="col-12">
@@ -591,11 +593,11 @@
                         <div class="col-12">
                             <div class="form-floating">
                                 <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
-                                <label for="message">Message</label>
+                                <label for="message" id="message" name="message" >Message</label>
                             </div>
                         </div>
                         <div class="col-12">
-                            <button class="btn btn-primary w-100 py-3 " style="background-color: #F7A51C;border: #F7A51C;"   type="submit">Send Message</button>
+                            <button class="btn btn-primary w-100 py-3 " type="submit"  style="background-color: #F7A51C;border: #F7A51C;"   type="submit">Envoyer</button>
                         </div>
                     </div>
                 </form>
@@ -679,7 +681,24 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" style="background-color: #B03233; "><i class="bi bi-arrow-up"></i></a>
+     <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var form = event.target;
+    var formData = new FormData(form);
 
+    fetch(form.action, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('statusMessage').innerText = data;
+        form.reset();
+    })
+    .catch(error => console.error('Error:', error));
+});
+     </script>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
